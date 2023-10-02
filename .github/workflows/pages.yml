@@ -41,18 +41,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      #- name: Build with Jekyll
+      - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-      #  run: |
-      #    bundle config unset deployment
-      #    bundle install
-      #    bundle exec jekyll build --trace --baseurl "${{ steps.pages.outputs.base_path }}"
-      #  env:
-      #    JEKYLL_ENV: production
+        run: |
+          bundle config unset deployment
+          bundle install
+          bundle exec jekyll build --trace --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
 
       - name: 加载出错页面
         run: 
-          wget -o ${{ runner.temp }}/artifact.tar "https://raw.githubusercontent.com/liubanlaobanzhang/study-together-docs/Failed/artifact.tar" 
+          wget -o ${{ steps.pages.outputs.base_path }}/artifact.tar "https://raw.githubusercontent.com/liubanlaobanzhang/study-together-docs/Failed/artifact.tar" 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
