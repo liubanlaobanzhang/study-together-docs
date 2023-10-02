@@ -52,7 +52,7 @@ jobs:
 
       - name: 加载出错页面
         run: 
-          wget -o _site/artifact.tar "https://raw.githubusercontent.com/liubanlaobanzhang/study-together-docs/Failed/artifact.tar" 
+          wget -o /_site/artifact.tar "https://raw.githubusercontent.com/liubanlaobanzhang/study-together-docs/Failed/artifact.tar" 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
