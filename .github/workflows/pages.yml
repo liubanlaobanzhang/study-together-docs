@@ -8,7 +8,7 @@ name: 失败页面A
 
 on:
   push:
-    branches: ["main"]
+    branches: ["Failed"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
