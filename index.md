@@ -1,9 +1,7 @@
 ---
-layout: default
-title: 前面的区域以后再来探索吧？
-permalink: /404
-nav_exclude: true
-search_exclude: true
+title: "服务器维护中"
+layout: home
+nav_order: 1
 ---
 
 <div align="center">
